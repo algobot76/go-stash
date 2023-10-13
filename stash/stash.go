@@ -57,6 +57,7 @@ func main() {
 			elastic.SetURL(processor.Output.ElasticSearch.Hosts...),
 			elastic.SetBasicAuth(processor.Output.ElasticSearch.Username, processor.Output.ElasticSearch.Password),
 		)
+		// (ab76) similar to log.Fatal
 		logx.Must(err)
 
 		filters := filter.CreateFilters(processor)
